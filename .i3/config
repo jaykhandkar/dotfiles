@@ -35,7 +35,7 @@ set $right semicolon
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec x-terminal-emulator
+bindsym Mod1+Return exec kitty
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -194,10 +194,17 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-bindsym Mod1+n exec firefox
+bindsym Mod1+n exec brave
 exec nitrogen --restore &
 exec compton &
 #-------------------i3-gaps--------------------------
 gaps inner 10
 gaps outer 10
 for_window [class="^.*"] border pixel 2
+
+#enable volume keys to work with pulse audio
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
