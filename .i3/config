@@ -195,6 +195,7 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 bindsym Mod1+n exec brave
+bindsym Mod1+b exec kitty ranger
 exec nitrogen --restore &
 exec compton &
 #-------------------i3-gaps--------------------------
