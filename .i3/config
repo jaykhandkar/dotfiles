@@ -201,6 +201,8 @@ exec compton &
 #-------------------i3-gaps--------------------------
 gaps inner 10
 gaps outer 10
+bindsym Mod1+shift+d gaps inner all set 0; gaps outer all set 0
+bindsym Mod1+shift+t gaps inner all set 10; gaps outer all set 10
 for_window [class="^.*"] border pixel 2
 
 #enable volume keys to work with pulse audio
