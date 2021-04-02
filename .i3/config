@@ -32,8 +32,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -106,9 +106,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  "
-set $ws2 "2:  "
-set $ws3 "3: 😿"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -189,18 +189,18 @@ client.urgent		$ubgcolor	$ubgcolor	$textcolor	$ubgcolor
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks -c /home/jay/.config/i3blocks/i3blocks.conf
-	position top
-	colors {
-		background	#000000
-		separator	$bgcolor
-		#			border		background		text
-		focused_workspace	$bgcolor	$bgcolor	$textcolor
-		inactive_workspace	#000000		#000000		$textcolor
-		urgent_workspace	$ubgcolor	$ubgcolor	$textcolor
-	}
-}
+#bar {
+#        status_command i3blocks -c /home/jay/.config/i3blocks/i3blocks.conf
+#	position top
+#	colors {
+#		background	#000000
+#		separator	$bgcolor
+#		#			border		background		text
+#		focused_workspace	$bgcolor	$bgcolor	$textcolor
+#		inactive_workspace	#000000		#000000		$textcolor
+#		urgent_workspace	$ubgcolor	$ubgcolor	$textcolor
+#	}
+#}
 
 #misc. keybindings
 bindsym $mod+n exec brave
@@ -208,7 +208,7 @@ bindsym $mod+p exec scrot
 bindsym $mod+b exec kitty ranger
 
 #display wallpaper
-exec_always feh --bg-fill /home/jay/Pictures/cool-arch.png
+exec_always feh --bg-fill /home/jay/Pictures/cool-arch.jpg
 
 #keybinding for i3lock
 bindsym $mod+x exec i3lock
@@ -225,3 +225,6 @@ gaps outer 10
 bindsym $mod+shift+d gaps inner all set 0; gaps outer all set 0
 bindsym $mod+shift+t gaps inner all set 10; gaps outer all set 10
 for_window [class="^.*"] border pixel 2
+
+#launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
