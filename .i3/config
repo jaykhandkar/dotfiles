@@ -205,10 +205,10 @@ set $ubgcolor	#ff0000
 #misc. keybindings
 bindsym $mod+n exec brave
 bindsym $mod+p exec scrot
-bindsym $mod+b exec kitty ranger
+bindsym $mod+b exec alacritty -e ranger
 
 #display wallpaper
-exec_always feh --bg-fill /home/jay/Pictures/archtv.png
+exec_always feh --bg-fill /home/jay/Pictures/arch-dracula.png
 
 #keybinding for i3lock
 bindsym $mod+x exec i3lock

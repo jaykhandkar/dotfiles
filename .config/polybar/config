@@ -18,12 +18,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #80131617
-background-alt = #131617
+background = #282836
+background-alt = #ab8bbb
 ;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
+foreground = #f8f8f2
 foreground-alt = #ffffff
-primary = #1890cc
+primary = #ffffff
 secondary = #ffffff
 alert = #bd2c40
 
@@ -51,12 +51,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=18;1
-font-1 = unifont:fontformat=truetype:size=18:antialias=false;0
-font-2 = siji:pixelsize=18;1
-font-3 = Font Awesome 5 Free:pixelsize=18;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=18;2
-font-5 = Font Awesome 5 Brands:pixelsize=18;2
+font-0 = fixed:pixelsize=20;1
+font-1 = unifont:fontformat=truetype:size=20:antialias=false;0
+font-2 = siji:pixelsize=20;1
+font-3 = Font Awesome 5 Free:pixelsize=20;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=20;2
+font-5 = Font Awesome 5 Brands:pixelsize=20;2
 
 modules-left = i3
 modules-center = xwindow
