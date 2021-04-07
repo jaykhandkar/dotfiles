@@ -176,14 +176,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Window colors
-set $bgcolor	#314E6C
-set $ibgcolor	#26323b
+set $bgcolor	#AB8BBB
+set $ibgcolor	#282836
 set $textcolor	#ffffff
 set $ubgcolor	#ff0000
 
 #			border		background	text		indicator
-#client.focused		$bgcolor	$bgcolor	$textcolor	$bgcolor
-#client.unfocused	$ibgcolor	$ibgcolor	$textcolor	$ibgcolor
+client.focused		$bgcolor	$bgcolor	$textcolor	$bgcolor
+client.unfocused	$ibgcolor	$ibgcolor	$textcolor	$ibgcolor
 #client.focused_inactive $ibgcolor	$ibgcolor	$textcolor	$ibgcolor
 #client.urgent		$ubgcolor	$ubgcolor	$textcolor	$ubgcolor
 
@@ -224,7 +224,7 @@ gaps inner 10
 gaps outer 10
 bindsym $mod+shift+d gaps inner all set 0; gaps outer all set 0
 bindsym $mod+shift+t gaps inner all set 10; gaps outer all set 10
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 #launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
