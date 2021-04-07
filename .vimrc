@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -19,7 +19,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
 set title
-set number
+set number relativenumber
 set tabstop=8
 set softtabstop=8
 set shiftwidth=8
