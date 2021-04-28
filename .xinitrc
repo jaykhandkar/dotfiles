@@ -4,8 +4,14 @@ xrdb -merge ~/.Xresources
 picom &
 
 #background image
-feh --bg-fill /home/jay/Pictures/GNULove.tif
+feh --bg-scale $PATH-TO-WALLPAPER
 dwmblocks &
+
+#disable intel turbo boost
+sudo turbo-off
+
+#set cpu frequency scaling governor
+sudo cpupower frequency-set -g conservative
 
 #dwm loop
 exec dwm
