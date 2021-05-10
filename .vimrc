@@ -1,4 +1,4 @@
-" Vundle setup - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" install Vundle - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -7,8 +7,10 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'lervag/vimtex'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'sheerun/vim-polyglot'
@@ -16,11 +18,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
+call vundle#end()            
+
 "set airline theme
 let g:airline_theme='angr'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on
 syntax on
 set title
 set number relativenumber
