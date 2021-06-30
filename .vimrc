@@ -10,18 +10,15 @@ call vundle#begin()
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/goyo.vim'
+Plugin 'neoclide/coc.nvim'
 Plugin 'lervag/vimtex'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-call vundle#end()            
 
-"set airline theme
-let g:airline_theme='angr'
+call vundle#end()            
 
 filetype plugin indent on
 syntax on

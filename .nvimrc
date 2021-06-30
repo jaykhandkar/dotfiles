@@ -9,16 +9,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-airline/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-"set airline theme
-let g:airline_theme='zenburn'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -31,6 +27,18 @@ set tabstop=8
 set softtabstop=8
 set shiftwidth=8
 set noexpandtab
+
+" Lightline
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \   'cocstatus': 'coc#status'
+      \ },
+      \ }
 
 "mappings for working with splits
 nnoremap <C-J> <C-W><C-J>

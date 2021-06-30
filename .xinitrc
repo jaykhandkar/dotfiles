@@ -4,14 +4,14 @@ xrdb -merge ~/.Xresources
 picom &
 
 #background image
-feh --bg-scale $PATH-TO-WALLPAPER
+feh --bg-scale /usr/share/backgrounds/archlinux/wild.png
 dwmblocks &
 
 #disable intel turbo boost
-sudo turbo-off
+#sudo turbo-off
 
 #set cpu frequency scaling governor
-sudo cpupower frequency-set -g conservative
+#sudo cpupower frequency-set -g conservative
 
 #dwm loop
 exec dwm
