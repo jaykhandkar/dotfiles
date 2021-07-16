@@ -48,8 +48,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.font = "JetBrains Mono 10"
+beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
+--beautiful.font = "JetBrains Mono 10"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -213,7 +213,9 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-	    volume_widget(),
+	    volume_widget{
+		widget_type = 'icon_and_text'
+            },
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
@@ -587,5 +589,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- autostart stuff
 awful.spawn.with_shell("xrdb -merge /home/jay/.Xresources")
 awful.spawn.with_shell("picom --experimental-backend")
-awful.spawn.with_shell("feh --bg-scale /usr/share/backgrounds/archlinux/gritty.png")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("turboff")
